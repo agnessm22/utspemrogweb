@@ -1,0 +1,24 @@
+{
+  "name": "utspemrogweb",
+  "version": "1.0.0",
+  "description": "uts pemrograman web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agnessm22/utspemrogweb.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "agnes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agnessm22/utspemrogweb/issues"
+  },
+  "homepage": "https://github.com/agnessm22/utspemrogweb#readme"
+}
