@@ -8,4 +8,8 @@ module.exports = function(app) {
 
      app.route('/tampil/:id')
         .get(jsonku.tampilsemuaberdasarkanid);
+
+    app.route('/tampil')
+        .get(jsonku.tampilsemuasparepart);
+
 } 
