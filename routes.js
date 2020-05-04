@@ -12,4 +12,7 @@ module.exports = function(app) {
     app.route('/tampil')
         .get(jsonku.tampilsemuasparepart);
 
-} 
+   app.route('/tampilmontir')
+        .get(jsonku.tampilsemuamontir);
+
+}
