@@ -9,11 +9,12 @@ var ip = require('ip');
 //controller untuk register
 exports.registrasi = function(req,res){
     var post = {
-        username: req.body.username,
+        id_user: req.body.id_user,
+        nama_user: req.body.nama_user,
         email: req.body.email,
         password: md5(req.body.password),
         role: req.body.role,
-        tanggal_daftar: new Date()
+        level: req.body.level
     }
 
     var query = "SELECT email FROM ?? WHERE ??";
