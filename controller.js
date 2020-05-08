@@ -148,5 +148,21 @@ exports.tambahDataServis = function(req, res) {
          }else {
              response.ok("berhasil menambahkan data servis",res)
          }
-     });
+     });     
+};
+
+//mengubah data montir
+exports.ubahmontir = function (req,res) {
+    var id_montir=req.body.id_montir;
+    var Nama_montir=req.body.Nama_montir;
+    var harga_perjam=req.body.harga_perjam;
+
+    connection.query('UPDATE t_montir SET Nama_montir=?, harga_perjam=? WHERE id_montir=?', [Nama_montir,harga_perjam,id_montir],
+    function (error,rows,fields){
+        if(error){
+            console.log(error);
+        } else {
+            response.ok("berhasil ubah data montir",res)
+        }
+    });
 };
