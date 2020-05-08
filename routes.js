@@ -40,5 +40,9 @@ module.exports = function(app) {
     app.route('/ubahdatasparepart')
         .put(jsonku.ubahsparepart);
 
+    app.route('/ubahdatalevel')
+        .put(jsonku.ubahlevel);
+
+
 }
 
