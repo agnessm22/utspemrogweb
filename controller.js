@@ -73,7 +73,7 @@ exports.tambahDataMontir = function(req, res) {
      });
 };
 
-//menambahkan data montir di tabel sparepart
+//menambahkan data sparepart di tabel sparepart
 exports.tambahDataSparepart = function(req, res) {
     var id_sparepart=req.body.id_sparepart;
     var nama_sparepart=req.body.nama_sparepart;
@@ -92,3 +92,23 @@ exports.tambahDataSparepart = function(req, res) {
      });
 };
 
+//menambahkan data user di tabel user
+exports.tambahuser = function(req, res) {
+    var id_user=req.body.id_user;
+    var nama_user=req.body.nama_user;
+    var email = req.body.email;
+    var password = req.body.password;
+    var role = req.body.role;
+    var level = req.body.level;
+
+    connection.query('INSERT INTO t_user (id_user, nama_user,email, password,role,level) VALUES (?,?,?,?,?,?)',
+     [id_user,nama_user,email,password,role,level],
+     function(error,rows,fields)
+     {
+         if(error){
+             connection.log(error);
+         }else {
+             response.ok("berhasil menambahkan data user",res)
+         }
+     });
+};
