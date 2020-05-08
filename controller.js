@@ -112,3 +112,20 @@ exports.tambahuser = function(req, res) {
          }
      });
 };
+
+//menambahkan data level di tabel level
+exports.tambahDataLevel = function(req, res) {
+    var id_level=req.body.id_level;
+    var nama_level=req.body.nama_level;
+
+    connection.query('INSERT INTO t_level (id_level, nama_level) VALUES (?,?)',
+     [id_level,nama_level],
+     function(error,rows,fields)
+     {
+         if(error){
+             connection.log(error);
+         }else {
+             response.ok("berhasil menambahkan data level",res)
+         }
+     });
+};
