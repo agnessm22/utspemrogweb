@@ -36,6 +36,9 @@ module.exports = function(app) {
 
     app.route('/ubahdatamontir')
         .put(jsonku.ubahmontir);
+    
+    app.route('/ubahdatasparepart')
+        .put(jsonku.ubahsparepart);
 
 }
 
