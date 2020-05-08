@@ -14,7 +14,11 @@ module.exports = function(app) {
 
    app.route('/tampilmontir')
         .get(jsonku.tampilsemuamontir);
+    
+    app.route('/tambahmontir')
+        .post(jsonku.tambahDataMontir);
 
+<<<<<<< HEAD
     app.route('/tambahmontir')
         .post(jsonku.tambahDataMontir);
 
@@ -22,3 +26,6 @@ module.exports = function(app) {
         .post(jsonku.tambahDataSparepart);
 
 }
+=======
+}
+>>>>>>> 2b75c76f44d29f483589728aa7f730f8952d0a15

@@ -72,6 +72,7 @@ exports.tambahDataMontir = function(req, res) {
          }
      });
 };
+<<<<<<< HEAD
 
 //menambahkan data montir di tabel sparepart
 exports.tambahDataSparepart = function(req, res) {
@@ -91,3 +92,5 @@ exports.tambahDataSparepart = function(req, res) {
          }
      });
 };
+=======
+>>>>>>> 2b75c76f44d29f483589728aa7f730f8952d0a15
