@@ -275,3 +275,16 @@ exports.hapususer=function(req,res){
         }
     });
 };
+
+//menghapus data servis berdasarkan id
+exports.hapusservis=function(req,res){
+    var id=req.body.id_servis;
+    connection.query('DELETE FROM t_servis WHERE id_servis=?', [id],
+    function(error,rows,fields){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok("berhasil hapus data servis",res)
+        }
+    });
+};
