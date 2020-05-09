@@ -288,3 +288,16 @@ exports.hapusservis=function(req,res){
         }
     });
 };
+
+//menghapus data level berdasarkan id
+exports.hapuslevel=function(req,res){
+    var id=req.body.id_level;
+    connection.query('DELETE FROM t_level WHERE id_level=?', [id],
+    function(error,rows,fields){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok("berhasil hapus data level",res)
+        }
+    });
+};
