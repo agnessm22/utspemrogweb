@@ -52,5 +52,8 @@ module.exports = function(app) {
     app.route('/hapusdatamontir')
         .delete(jsonku.hapusmontir);
 
+    app.route('/hapusdatasparepart')
+        .delete(jsonku.hapussparepart);
+
 }
 
