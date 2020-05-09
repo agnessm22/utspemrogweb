@@ -198,3 +198,22 @@ exports.ubahlevel = function (req,res) {
         }
     });
 };
+
+//mengubah data user
+exports.ubahuser = function (req,res) {
+    var id_user=req.body.id_user;
+    var nama_user=req.body.nama_user;
+    var email=req.body.email;
+    var password=req.body.password;
+    var role=req.body.role;
+    var level=req.body.level;
+
+    connection.query('UPDATE t_user SET nama_user=?, email=?, password=?,role=?, level=? WHERE id_user=?', [nama_user,email,password,role,level,id_user],
+    function (error,rows,fields){
+        if(error){
+            console.log(error);
+        } else {
+            response.ok("berhasil ubah data user",res)
+        }
+    });
+};
