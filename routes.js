@@ -46,6 +46,8 @@ module.exports = function(app) {
     app.route('/ubahdatauser')
         .put(jsonku.ubahuser);
 
+    app.route('/ubahdataservis')
+        .put(jsonku.ubahservis);
 
 }
 
